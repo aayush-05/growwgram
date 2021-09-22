@@ -99,10 +99,18 @@ p {
 }
 
 @media (max-width: 576px) {
+  .userProfile04NameContainer {
+    flex-wrap: wrap;
+  }
+
   .userProfile04NameContainer
   h2 {
-    max-width: 112px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex: 0 0 100%;
+    padding-bottom: 15px;
+  }
+
+  .userProfile04NameContainer
+  button:first-of-type {
+    margin-left: 0;
   }
 }

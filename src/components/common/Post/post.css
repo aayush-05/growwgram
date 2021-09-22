@@ -1,7 +1,7 @@
 .post02OuterContainer {
   border: 1px solid var(--grey);
   border-radius: 3px;
-  margin: 12px auto;
+  margin: 25px auto;
   max-height: 868px;
   max-width: 614px;
   width: 100%;
@@ -13,6 +13,21 @@
   height: 61px;
   padding: 0 16px;
   width: 100%;
+}
+
+.post02TopContainer
+a {
+  align-items: center;
+  color: var(--black);
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.post02TopContainer
+a:hover {
+  text-decoration: underline;
 }
 
 .post02UserPhoto {
@@ -27,18 +42,8 @@
   padding-left: 16px;
 }
 
-.post02UserDetailsContainer
-a {
-  color: var(--black);
+.post02UserDetailsContainer {
   flex: 0 0 100%;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.post02UserDetailsContainer
-a:hover {
-  text-decoration: underline;
 }
 
 .post02TopContainer
@@ -53,6 +58,7 @@ svg {
 
 .post02MiddleContainer
 img {
+  display: none;
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -119,8 +125,9 @@ p {
 }
 
 .post02CommentContainer
-a {
+p:last-of-type {
   margin-left: auto;
+  opacity: 1;
   padding-right: 8px;
 }
 

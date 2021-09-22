@@ -9,6 +9,7 @@ import {
 } from '../actionTypes/timelineActionTypes';
 
 const initialState: postsDataType = {
+  isError: false,
   isFetching: false,
   timelinePosts: [],
 };
@@ -37,6 +38,7 @@ const timelineReducer = (
     case ERROR_TIMELINE_POSTS:
       return {
         ...state,
+        isError: true,
         isFetching: false,
       };
       

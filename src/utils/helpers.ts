@@ -29,6 +29,7 @@ export const cacheApiResponse = async (apiEndpoint: string) => {
       cache.put(apiEndpoint, customResponse);
       return jsonResponse;
     }
+
   } catch (error) {
     console.log(error);
   }
@@ -51,11 +52,13 @@ export const getRequiredPostsData = async (apiEndpoint: string) => {
       }
     } as postDataType;
   });
+
   return requiredResponseData;
 };
 
 export const getRequiredUserProfileData = async (apiEndpoint: string) => {
   const response = await cacheApiResponse(apiEndpoint);
+  
   return {
     id: response.id,
     username: response.username,

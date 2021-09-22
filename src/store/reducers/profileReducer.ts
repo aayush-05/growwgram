@@ -15,6 +15,7 @@ import {
 
 const initialState: userDataType = {
   isFetching: false,
+  isError: false,
   userProfile: {
     id: '',
     username: '',
@@ -27,9 +28,11 @@ const initialState: userDataType = {
   userPosts: [],
 };
 
+type payloadDataType = postDataType[] | userProfileDataType;
+
 const profileReducer = (
   state = initialState,
-  action: {type: string, payload?: postDataType[] | userProfileDataType}
+  action: {type: string, payload?: payloadDataType}
 ) => {
   switch(action.type) {
     case FETCH_USER_POSTS:
@@ -63,6 +66,7 @@ const profileReducer = (
     case ERROR_USER_PROFILE:
       return {
         ...state,
+        isError: true,
         isFetching: false,
       };
     

@@ -1,0 +1,60 @@
+.gridPost08GridPost {
+  flex: 0 0 33.33%;
+  height: 313px;
+  max-height: 313px;
+  max-width: 313px;
+  object-fit: cover;
+  padding: 10px;
+  position: relative;
+  width: 313px;
+}
+
+.gridPost08Backdrop {
+  align-items: center;
+  background-color: var(--grid-black);
+  display: flex;
+  height: calc(100% - 20px);
+  justify-content: center;
+  position: absolute;
+  visibility: hidden;
+  width: calc(100% - 20px);
+}
+
+.gridPost08Backdrop
+p {
+  color: var(--white);
+  flex: 0 0 100%;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.gridPost08Backdrop
+p svg {
+  margin-bottom: -6px;
+  padding-right: 5px;
+}
+
+.gridPost08GridPost:hover
+.gridPost08Backdrop {
+  visibility: visible;
+}
+
+.gridPost08GridPost
+img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .gridPost08GridPost {
+    height: 118px;
+    padding: 2px;
+    width: 118px;
+  }
+
+  .gridPost08Backdrop {
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+  }
+}

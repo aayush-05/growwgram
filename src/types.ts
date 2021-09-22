@@ -13,6 +13,7 @@ export type postDataType = {
 };
 
 export type postsDataType = {
+  isError: boolean,
   isFetching: boolean,
   timelinePosts: postDataType[],
 };
@@ -28,6 +29,7 @@ export type userProfileDataType = {
 };
 
 export type userDataType = {
+  isError: boolean,
   isFetching: boolean,
   userProfile: userProfileDataType,
   userPosts: postDataType[],

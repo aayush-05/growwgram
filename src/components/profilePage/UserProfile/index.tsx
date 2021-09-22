@@ -1,6 +1,6 @@
-import './userProfile.css';
-
 import { useAppSelector } from '../../../store/hooks';
+
+import './userProfile.css';
 
 const UserProfile = () => {
   const { userProfile } = useAppSelector(state => state.profileData);
@@ -11,6 +11,7 @@ const UserProfile = () => {
         <div className='userProfile04ImageContainer'>
           <img src={userProfile.profile_image} alt='User'/>
         </div>
+
         <div className='userProfile04InfoContainer'>
           <div className='userProfile04NameContainer'>
             <h2>{userProfile.username}</h2>
@@ -21,6 +22,7 @@ const UserProfile = () => {
             </button>
             <svg aria-label="More Options" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6.5" cy="12" r="1.5"></circle><circle cx="17.5" cy="12" r="1.5"></circle></svg>
           </div>
+
           <div className='userProfile04StatsContainer'>
             <p>
               <b>{userProfile.total_photos} </b>
@@ -35,6 +37,7 @@ const UserProfile = () => {
               collections
             </p>
           </div>
+          
           <div className='userProfile04StatsContainer'>
             <p className='userProfile04UserName'>
               <b>{userProfile.name}</b>

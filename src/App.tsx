@@ -1,5 +1,3 @@
-import './App.css';
-
 import {
   BrowserRouter,
   Route,
@@ -8,17 +6,24 @@ import {
 
 import Header from './components/common/Header';
 import Loader from './components/common/Loader';
+
 import { useAppSelector } from './store/hooks';
+
 import ProfilePage from './views/ProfilePage';
 import TimelinePage from './views/TimelinePage';
 
+import './App.css';
+
 const App = () => {
-  const isProfileFetching = useAppSelector(state => state.profileData.isFetching);
-  const isPostsFetching = useAppSelector(state => state.timelineData.isFetching);
+  const profileData = useAppSelector(state => state.profileData);
+  const timelinePostsData = useAppSelector(state => state.timelineData);
+  
+  const isTimelineLoading = timelinePostsData.isFetching && timelinePostsData.timelinePosts.length <= 10;
+  const isProfileLoading = profileData.isFetching && profileData.userPosts.length <= 10 && profileData.userProfile.id !== undefined;
   
   return (
     <>
-      {(isPostsFetching || isProfileFetching) && (
+      {(isTimelineLoading || isProfileLoading) && (
         <Loader />
       )}
       <BrowserRouter>

@@ -39,30 +39,14 @@ svg {
   margin-right: 5px;
 }
 
+.userPosts06ContentContainer {
+  flex: 0 0 100%;
+}
+
 .userPosts06GridContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 10px;
   width: 100%;
-}
-
-.userPosts06GridPost {
-  flex: 0 0 33.33%;
-  max-height: 313px;
-  max-width: 313px;
-}
-
-.userPosts06GridPost
-img {
-  height: 100%;
-  padding: 10px;
-  width: 100%;
-}
-
-@media (max-width: 576px) {
-  .userPosts06GridPost
-  img {
-    padding: 2px;
-  }
 }

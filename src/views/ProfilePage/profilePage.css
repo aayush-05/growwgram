@@ -1,0 +1,12 @@
+.profilePage05OuterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+@media (max-width: 768px) {
+  .profilePage05OuterContainer {
+    padding: 30px 0;
+  }
+}

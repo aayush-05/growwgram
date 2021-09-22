@@ -1,0 +1,108 @@
+.userProfile04DetailsContainer {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 60%;
+}
+
+.userProfile04ImageContainer {
+  flex: 0 0 20%;
+  padding-bottom: 20px;
+  padding-right: 30px;
+}
+
+.userProfile04ImageContainer
+img {
+  border-radius: 50%;
+  height: 150px;
+  max-height: 150px;
+  max-width: 150px;
+  object-fit: cover;
+  width: 150px;
+}
+
+.userProfile04InfoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 50%;
+}
+
+.userProfile04NameContainer {
+  align-items: center;
+  display: flex;
+  flex: 0 0 100%;
+}
+
+.userProfile04NameContainer
+h2 {
+  color: var(--black);
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 300;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.userProfile04NameContainer
+button {
+  margin: 0 4px;
+}
+
+.userProfile04NameContainer
+svg {
+  cursor: pointer;
+}
+
+.userProfile04NameContainer
+svg[aria-label='Down Chevron Icon'] {
+  transform: rotateX(-180deg);
+}
+
+.userProfile04StatsContainer {
+  flex: 0 0 100%;
+}
+
+.userProfile04StatsContainer
+p {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-right: 30px;
+}
+
+.userProfile04StatsContainer
+.userProfile04UserName {
+  margin-top: 0;
+}
+
+@media (max-width: 992px) {
+  .userProfile04DetailsContainer {
+    justify-content: flex-start;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .userProfile04DetailsContainer {
+    max-width: 95%;
+  }
+
+  .userProfile04ImageContainer {
+    flex: 0 0 100%;
+  }
+
+  .userProfile04InfoContainer {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .userProfile04NameContainer
+  h2 {
+    max-width: 112px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

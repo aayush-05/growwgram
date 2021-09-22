@@ -1,0 +1,58 @@
+.header01OuterContainer {
+  border-bottom: 1px solid var(--grey);
+  display: flex;
+  height: 54px;
+  justify-content: center;
+}
+
+.header01Container {
+  align-items: center;
+  display: flex;
+  flex: 0 0 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 975px;
+  padding: 0 20px;
+}
+
+.header01Logo {
+  cursor: pointer;
+  max-height: 44px;
+}
+
+.header01SearchContainer {
+  background-color: var(--background-grey);
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  color: var(--grey);
+  height: 28px;
+  line-height: 18px;
+  margin-left: 25%;
+  padding: 0 10px;
+  width: 215px;
+}
+
+.header01SearchContainer::placeholder {
+  color: var(--grey);
+  font-size: 14px;
+  opacity: 1;
+  text-align: center;
+}
+
+.header01SearchContainer:focus {
+  outline: none;
+}
+
+.header01ButtonsContainer {
+  margin-left: auto;
+}
+
+.header01SignupLink {
+  margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .header01SearchContainer {
+    display: none;
+  }
+}

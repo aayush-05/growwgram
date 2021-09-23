@@ -19,7 +19,7 @@ const App = () => {
   const timelinePostsData = useAppSelector(state => state.timelineData);
   
   const isTimelineLoading = timelinePostsData.isFetching && timelinePostsData.timelinePosts.length <= 10;
-  const isProfileLoading = profileData.isFetching && profileData.userPosts.length <= 10 && profileData.userProfile.id !== undefined;
+  const isProfileLoading = profileData.isFetching && profileData.userPosts.length <= 10 && profileData.userProfile.id === undefined;
   
   return (
     <>

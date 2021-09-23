@@ -1,10 +1,10 @@
 .post02OuterContainer {
-  border: 1px solid var(--grey);
+  border: 1px solid var(--theme-grey);
   border-radius: 3px;
   margin: 25px auto;
   max-height: 868px;
   max-width: 614px;
-  width: 100%;
+  width: 614px;
 }
 
 .post02TopContainer {
@@ -18,7 +18,7 @@
 .post02TopContainer
 a {
   align-items: center;
-  color: var(--black);
+  color: var(--theme-black);
   display: flex;
   font-size: 14px;
   font-weight: 600;
@@ -114,6 +114,7 @@ svg:last-of-type {
 }
 
 .post02LikeCounter {
+  color: var(--theme-black);
   font-size: 14px;
   font-weight: 600;
   margin: 0;
@@ -122,11 +123,12 @@ svg:last-of-type {
 
 .post02CommentContainer {
   align-items: center;
-  border-top: 1px solid var(--grey);
+  border-top: 1px solid var(--theme-grey);
   display: flex;
   height: 56px;
   margin-top: 10px;
   padding: 8px;
+  transition: height 0.5s ease, opacity 0.3s ease 0.2s, padding 0.5s ease;
   width: 100%;
 }
 
@@ -139,6 +141,7 @@ svg {
 
 .post02CommentContainer
 p {
+  color: var(--theme-black);
   font-size: 14px;
   font-weight: 500;
   opacity: 0.6;
@@ -173,7 +176,7 @@ p:last-of-type {
 
 @media (max-width: 576px) {
   .post02OuterContainer {
-    border: 1px solid var(--white);
+    border: 0;
     max-width: 576px;
   }
 }

@@ -25,7 +25,10 @@ export const getTimelinePosts = (pageNumber: number) => {
 
       } catch(error) {
         console.log(error);
-        dispatch({type: ERROR_TIMELINE_POSTS});
+        dispatch({
+          type: ERROR_TIMELINE_POSTS,
+          payload: (error as Error).message,
+        });
       };
     };
   }

@@ -3,23 +3,26 @@
   flex: 0 0 100%;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 60%;
+  max-width: 975px;
 }
 
 .userProfile04ImageContainer {
-  flex: 0 0 20%;
-  padding-bottom: 20px;
-  padding-right: 30px;
+  border-radius: 50%;
+  flex: 0 0 30%;
+  height: 170px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  max-height: 170px;
+  max-width: 170px;
+  overflow: hidden;
+  width: 170px;
 }
 
 .userProfile04ImageContainer
 img {
-  border-radius: 50%;
-  height: 150px;
-  max-height: 150px;
-  max-width: 150px;
+  height: 100%;
   object-fit: cover;
-  width: 150px;
+  width: 100%;
 }
 
 .userProfile04InfoContainer {
@@ -36,7 +39,7 @@ img {
 
 .userProfile04NameContainer
 h2 {
-  color: var(--black);
+  color: var(--theme-black);
   display: inline-block;
   font-size: 28px;
   font-weight: 300;
@@ -65,6 +68,7 @@ svg[aria-label='Down Chevron Icon'] {
 
 .userProfile04StatsContainer
 p {
+  color: var(--theme-black);
   display: inline-block;
   font-size: 16px;
   font-weight: 400;

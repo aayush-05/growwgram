@@ -1,15 +1,29 @@
-:root {
+* {
+  box-sizing: border-box;
+}
+
+html {
   --black: rgb(38, 38, 38);
-  --grid-black: rgb(0, 0, 0, 0.3);
   --white: #ffffff;
   --primary-blue: #0095f6;
-  --background-grey: rgb(250, 250, 250);
-  --grey: #dbdbdb;
+  --theme-white: #ffffff;
+  --theme-black: rgb(38, 38, 38);
+  --theme-background-white: #ffffff;
+  --theme-grey: #dbdbdb;
+  --theme-background-grey: rgb(250, 250, 250);
+  --grid-black: rgb(0, 0, 0, 0.3);
   --text-grey: rgb(142, 142, 142);
 }
 
-* {
-  box-sizing: border-box;
+html[data-theme = 'dark'] {
+  --black: rgb(38, 38, 38);
+  --white: #ffffff;
+  --primary-blue: #0095f6;
+  --theme-white: #000000;
+  --theme-black: #ffffff;
+  --theme-background-white: rgb(18, 18, 18);
+  --theme-grey: rgb(54, 54, 54);
+  --theme-background-grey: rgb(18, 18, 18);
 }
 
 .PrimaryButton {
@@ -33,10 +47,10 @@
 }
 
 .SecondaryButton {
-  background-color: var(--white);
-  border: 1px solid var(--grey);
+  background-color: var(--theme-white);
+  border: 1px solid var(--theme-grey);
   border-radius: 4px;
-  color: var(--black);
+  color: var(--theme-black);
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -44,8 +58,15 @@
 }
 
 .ErrorMessage {
+  color: var(--theme-black);
   font-size: 16px;
   font-weight: 500;
   padding-top: 20%;
   text-align: center;
+}
+
+.Tooltip {
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  padding: 6px 12px !important;
 }

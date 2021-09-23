@@ -9,17 +9,17 @@
 
 .userPosts06SelectorContainer {
   align-items: center;
-  border-top: 1px solid var(--grey);
+  border-top: 1px solid var(--theme-grey);
   display: flex;
   flex: 0 0 100%;
   justify-content: center;
 }
 
 .userPosts06Selector {
-  background-color: var(--white);
+  background-color: var(--theme-background-white);
   border: 0;
   border-radius: 0;
-  border-top: 1px solid var(--grey);
+  border-top: 1px solid var(--theme-grey);
   color: var(--text-grey);
   cursor: pointer;
   font-size: 12px;
@@ -29,8 +29,8 @@
 }
 
 .userPosts06Selector[data-selected='true'] {
-  border-top: 1px solid var(--black);
-  color: var(--black);
+  border-top: 1px solid var(--theme-black);
+  color: var(--theme-black);
 }
 
 .userPosts06Selector

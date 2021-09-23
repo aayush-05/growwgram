@@ -1,15 +1,26 @@
+import React, { useContext } from 'react';
+
+import { ThemeContext } from '../../../App';
+
+import LogoLight from '../../../assets/images/logo.png';
+import LogoDark from '../../../assets/images/logoDark.png';
+
 import './loader.css';
 
-import Logo from '../../../assets/images/logo.png';
-
 const Loader = () => {
+  const currentTheme = useContext(ThemeContext);
+
   return (
     <div className='loader07OuterContainer'>
       <div className='loader07Container'>
-        <img src={Logo} alt='Growwgram' className='loader07Logo'/>
+        {currentTheme === 'light' ? (
+          <img src={LogoLight} alt='Growwgram' className='loader07Logo'/>
+        ) : (
+          <img src={LogoDark} alt='Growwgram' className='loader07Logo'/>
+        )}
       </div>
     </div>
   );
 };
 
-export default Loader;
+export default React.memo(Loader);

@@ -16,6 +16,7 @@ import {
 const initialState: userDataType = {
   isFetching: false,
   isError: false,
+  errorMessage: '',
   userProfile: {
     id: '',
     username: '',
@@ -28,7 +29,7 @@ const initialState: userDataType = {
   userPosts: [],
 };
 
-type payloadDataType = postDataType[] | userProfileDataType;
+type payloadDataType = postDataType[] | userProfileDataType | string;
 
 const profileReducer = (
   state = initialState,
@@ -67,12 +68,15 @@ const profileReducer = (
       return {
         ...state,
         isError: true,
+        errorMessage: (action.payload as string),
         isFetching: false,
       };
     
     case CLEAR_USER_PROFILE:
       return {
         ...state,
+        isError: false,
+        errorMessage: '',
         userProfile: {
           id: '',
           username: '',

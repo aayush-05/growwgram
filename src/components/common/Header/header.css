@@ -1,5 +1,6 @@
 .header01OuterContainer {
-  border-bottom: 1px solid var(--grey);
+  background-color: var(--theme-white);
+  border-bottom: 1px solid var(--theme-grey);
   display: flex;
   height: 54px;
   justify-content: center;
@@ -17,23 +18,24 @@
 
 .header01Logo {
   cursor: pointer;
-  max-height: 44px;
+  max-height: 35px;
 }
 
 .header01SearchContainer {
-  background-color: var(--background-grey);
-  border: 1px solid var(--grey);
+  background-color: var(--theme-background-grey);
+  border: 1px solid var(--theme-grey);
   border-radius: 4px;
-  color: var(--grey);
+  color: var(--text-grey);
   height: 28px;
   line-height: 18px;
   margin-left: 25%;
   padding: 0 10px;
+  text-align: center;
   width: 215px;
 }
 
 .header01SearchContainer::placeholder {
-  color: var(--grey);
+  color: var(--text-grey);
   font-size: 14px;
   opacity: 1;
   text-align: center;
@@ -44,7 +46,17 @@
 }
 
 .header01ButtonsContainer {
+  align-items: center;
+  display: flex;
   margin-left: auto;
+}
+
+.header01ButtonsContainer
+img {
+  cursor: pointer;
+  height: 20px;
+  margin-right: 12px;
+  width: 20px;
 }
 
 .header01SignupLink {
@@ -54,5 +66,11 @@
 @media (max-width: 768px) {
   .header01SearchContainer {
     display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .header01Logo {
+    max-height: 28px;
   }
 }

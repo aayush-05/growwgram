@@ -15,7 +15,9 @@ import './profilePage.css';
 
 const ProfilePage = () => {
   const { user } = useParams<Record<string, string | undefined>>();
-  const { isError } = useAppSelector(state => state.profileData);
+
+  const { isError, errorMessage } = useAppSelector(state => state.profileData);
+
   const dispatch = useDispatch();
   
   useEffect(() => {
@@ -29,11 +31,21 @@ const ProfilePage = () => {
     <>
       <main className='profilePage05OuterContainer'>
         {isError ? (
-          <h6 className='ErrorMessage'>
-            Some network error occurred.
-            <br /> 
-            Please refresh
-          </h6>
+          <>
+            {errorMessage !== '' ? (
+              <h6 className='ErrorMessage'>
+                {errorMessage}.
+                <br /> 
+                Please go back home
+              </h6>
+            ) : (
+              <h6 className='ErrorMessage'>
+              Some network error occurred.
+              <br /> 
+              Please refresh
+            </h6>
+            )}
+          </>
         ) : (
           <>
             <UserProfile />

@@ -31,8 +31,10 @@ export const getUserPosts = (userName: string, pageNumber: number) => {
         });
         
       } catch(error) {
-        console.log(error);
-        dispatch({type: ERROR_USER_POSTS});
+        dispatch({
+          type: ERROR_USER_POSTS,
+          payload: (error as Error).message,
+        });
       };
     };
   }
@@ -50,8 +52,10 @@ export const getUserProfile = (userName: string) => {
       });
 
     } catch(error) {
-      console.log(error);
-      dispatch({type: ERROR_USER_PROFILE});
+      dispatch({
+        type: ERROR_USER_PROFILE,
+        payload: (error as Error).message,
+      });
     };
   };
 };

@@ -16,7 +16,7 @@ const initialState: postsDataType = {
 
 const timelineReducer = (
   state = initialState,
-  action: {type: string, payload?: postDataType[]}
+  action: {type: string, payload?: postDataType[] | string}
 ) => {
   switch(action.type) {
     case FETCH_TIMELINE_POSTS:
@@ -39,6 +39,7 @@ const timelineReducer = (
       return {
         ...state,
         isError: true,
+        errorMessage: (action.payload as string),
         isFetching: false,
       };
       

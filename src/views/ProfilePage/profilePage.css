@@ -1,4 +1,5 @@
 .profilePage05OuterContainer {
+  background-color: var(--theme-background-white);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

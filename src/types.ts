@@ -30,6 +30,7 @@ export type userProfileDataType = {
 
 export type userDataType = {
   isError: boolean,
+  errorMessage: string,
   isFetching: boolean,
   userProfile: userProfileDataType,
   userPosts: postDataType[],

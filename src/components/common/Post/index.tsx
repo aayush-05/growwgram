@@ -11,12 +11,20 @@ import './post.css';
 
 const Post = ({ postData }: propsDataType) => {
   const [showImage, setShowImage] = useState(false);
-  const imageRef = useRef(null);
+  const likeAnimationRef = useRef(null);
 
   const imageOnLoad = () => {
     setShowImage(true);
   };
   
+  const middleContainerOnClick = () => {
+    const likeElement = likeAnimationRef.current as unknown as HTMLElement;
+    likeElement.classList.add('post02LikeAnimation');
+    setTimeout(() => {
+      likeElement.classList.remove('post02LikeAnimation');
+    }, 1500);
+  };
+
   return (
     <>
       <div className='post02OuterContainer'>
@@ -31,7 +39,8 @@ const Post = ({ postData }: propsDataType) => {
           <svg aria-label="More Options" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6.5" cy="12" r="1.5"></circle><circle cx="17.5" cy="12" r="1.5"></circle></svg>
         </div>
 
-        <div className='post02MiddleContainer'>
+        <div className='post02MiddleContainer' onDoubleClick={middleContainerOnClick}>
+          <div className='post02Like' ref={likeAnimationRef}></div>
           <Blurhash 
             hash={postData.blur_hash}
             style={{
@@ -46,7 +55,6 @@ const Post = ({ postData }: propsDataType) => {
             }}
             src={postData.url}
             alt=''
-            ref={imageRef}
             onLoad={imageOnLoad}
           />
         </div>

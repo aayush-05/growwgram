@@ -54,6 +54,27 @@ svg {
 
 .post02MiddleContainer {
   height: 614px;
+  position: relative;
+}
+
+.post02Like {
+  background: url("https://imgur.com/rksyGE8.png") no-repeat center/contain;
+  bottom: 0;
+  height: 162px;
+  position: absolute;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  top: 0;
+  transform: scale(0);
+  right: 0;
+  width: 184px;
+}
+
+.post02LikeAnimation {
+  animation-duration: 1500ms;
+  animation-name: likeAnimation;
+  animation-timing-function: ease-in-out;
 }
 
 .post02MiddleContainer
@@ -129,6 +150,25 @@ p:last-of-type {
   margin-left: auto;
   opacity: 1;
   padding-right: 8px;
+}
+
+@keyframes likeAnimation {
+  0% { 
+    opacity: 0; 
+    transform: scale(0); 
+  }
+  15% { 
+    opacity: 0.9; 
+    transform: scale(1.2); 
+  }
+  30% {
+    transform:scale(0.95); 
+  }
+  45%,
+  80% {
+    opacity: 0.9; 
+    transform: scale(1); 
+  }
 }
 
 @media (max-width: 576px) {

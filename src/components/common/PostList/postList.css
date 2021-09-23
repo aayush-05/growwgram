@@ -10,13 +10,13 @@
 
 .postList03LoaderContainer
 svg {
-  animation: loading infinite 1s linear;
+  animation: loadingAnimation infinite 1s linear;
   height: 25px;
   margin: 20px auto;
   width: 25px;
 }
 
-@keyframes loading {
+@keyframes loadingAnimation {
   from {
     transform: rotate(0deg);
   }

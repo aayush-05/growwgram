@@ -150,6 +150,7 @@ p {
 
 .post02CommentContainer
 p:last-of-type {
+  color: var(--primary-blue);
   margin-left: auto;
   opacity: 1;
   padding-right: 8px;
@@ -174,9 +175,9 @@ p:last-of-type {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 615px) {
   .post02OuterContainer {
     border: 0;
-    max-width: 576px;
+    width: 100%;
   }
 }

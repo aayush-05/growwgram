@@ -14,7 +14,7 @@ import {
 } from '../actionTypes/profileActionTypes';
 
 const initialState: userDataType = {
-  isFetching: false,
+  isFetching: true,
   isError: false,
   errorMessage: '',
   userProfile: {

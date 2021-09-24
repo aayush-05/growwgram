@@ -14,6 +14,7 @@ export type postDataType = {
 
 export type postsDataType = {
   isError: boolean,
+  errorMessage: string,
   isFetching: boolean,
   timelinePosts: postDataType[],
 };

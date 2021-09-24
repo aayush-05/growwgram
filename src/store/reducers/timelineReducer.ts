@@ -10,7 +10,8 @@ import {
 
 const initialState: postsDataType = {
   isError: false,
-  isFetching: false,
+  errorMessage: '',
+  isFetching: true,
   timelinePosts: [],
 };
 

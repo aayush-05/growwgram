@@ -45,7 +45,7 @@ const App = () => {
 
   return (
     <ThemeContext.Provider value={currentTheme}>
-      {(isTimelineLoading || isProfileLoading) && (
+      {(isTimelineLoading && isProfileLoading) && (
         <Loader />
       )}
       <BrowserRouter>

@@ -51,8 +51,8 @@ const App = () => {
       <BrowserRouter>
       <Header changeTheme={changeTheme}/>
         <Switch>
-          <Route exact path="/" component={TimelinePage} />
           <Route exact path="/:user" component={ProfilePage} />
+          <Route path="/" component={TimelinePage} />
         </Switch>
       </BrowserRouter>
     </ThemeContext.Provider>
